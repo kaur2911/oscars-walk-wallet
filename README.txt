@@ -1,28 +1,16 @@
-OSCAR'S WALK WALLET
+Oscar's Walk Wallet v4.0
 
-What this version includes:
-- Jill: 45 min $30, 60 min $45
-- Donna: 45 min $25, 60 min $30
-- Katherine: 45 min $20, 60 min $25
-- Tara: 45 min $25
-- Alison: 60 min $35
-- Quick walk logging with rate auto-fill
-- Paid/unpaid status, payment method, notes
-- Logged by Harpreet/Navdeep
-- Monthly/yearly totals
-- History filters and editing/deleting walks
-- Editable walker rates with historical amount snapshots
-- JSON backup/export and import
-- Installable PWA files and offline cache
+Private household dog-walking expense tracker with optional two-phone sync via Supabase.
 
-IMPORTANT: This v1 intentionally stores records locally in the browser/device. It does not sync two phones live. Export/import can transfer the ledger between phones until a shared backend is added.
+V4 adds:
+- Shared Oscar household sync
+- One-time 6-character invite code
+- Safe migration of existing V3 walkers, rates, and walks
+- Local safety backup before migration
+- Sync status and manual Sync now
+- Existing custom durations, themes, history, and backups remain
 
-To run locally on a computer:
-1. Open a terminal in this folder.
-2. Run: python3 -m http.server 8080
-3. Open http://localhost:8080 in a browser.
+Deployment: upload all five files to the root of the GitHub Pages repository.
+Do not delete the Home Screen app or clear Safari website data before migration is confirmed.
 
-To install on iPhone after hosting the folder on an HTTPS website:
-1. Open the website in Safari.
-2. Tap Share.
-3. Choose Add to Home Screen.
+The Supabase publishable key in index.html is intentionally client-visible. Security relies on authenticated users plus Row Level Security. Never place a Supabase secret/service-role key in this project.
